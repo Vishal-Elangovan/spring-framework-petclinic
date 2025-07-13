@@ -13,7 +13,8 @@ pipeline {
     stages {
         stage('Clone Repo') {
             steps {
-                git 'https://github.com/Vishal-Elangovan/spring-framework-petclinic.git'
+                git branch: 'main',
+                    url: 'https://github.com/Vishal-Elangovan/spring-framework-petclinic.git'
             }
         }
 
