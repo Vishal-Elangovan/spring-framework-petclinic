@@ -6,8 +6,8 @@ pipeline {
     }
 
     environment {
-        SONARQUBE_URL = 'http://43.204.37.49:9000'
-        SONAR_TOKEN = credentials('sqa_6152e5c00d32d3ad1a0cac3bbed102b278ff8175')  // Set this in Jenkins Credentials
+        SONARQUBE_URL = 'http://65.2.168.222:9000'
+        SONAR_TOKEN = credentials('sonar-token')  // Set this in Jenkins Credentials
     }
 
     stages {
