@@ -34,7 +34,7 @@ pipeline {
 
         stage('Deploy to Tomcat') {
             steps {
-                sh 'cp target/*.war /home/ubuntu/apache-tomcat-10.1.43/webapps/'  // Adjust path to your Tomcat instance
+                sh 'cp target/*.war /opt/tomcat/webapps/'  // Adjust path to your Tomcat instance
             }
         }
     }
