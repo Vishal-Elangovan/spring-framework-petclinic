@@ -6,7 +6,7 @@ pipeline {
     }
 
     environment {
-        SONARQUBE_URL = 'http://65.2.168.222:9000'
+        SONARQUBE_URL = 'http://43.204.19.103:9000'
         SONAR_TOKEN = credentials('sonar-token')  // Set this in Jenkins Credentials
     }
 
