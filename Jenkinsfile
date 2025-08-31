@@ -32,10 +32,15 @@ pipeline {
             }
         }
 
-        stage('Deploy to Tomcat') {
+       stage('Deploy to Tomcat') {
             steps {
-                sh 'cp target/*.war /opt/tomcat/webapps/'  // Adjust path to your Tomcat instance
+                sh '''
+                  sudo rm -rf /opt/tomcat/webapps/petclinic*
+                  sudo cp target/*.war /opt/tomcat/webapps/petclinic.war
+                  sudo systemctl restart tomcat
+                '''
             }
-        }
+}
+
     }
 }
